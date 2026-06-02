@@ -1,0 +1,20 @@
+function gerarEtiquetasEndereco(personagens) {
+  personagens.forEach(p => {
+    
+    if (!p.rua || !p.numero) return;
+
+    let endereco = `${p.nome} - ${p.rua}, ${p.numero}`;
+
+
+    if (p.complemento) {
+      endereco += ` [${p.complemento}]`;
+    }
+
+    
+    if (p.cep) {
+      endereco += ` - ${p.cep}`;
+    }
+
+    console.log(endereco);
+  });
+}

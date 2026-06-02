@@ -1,0 +1,19 @@
+function agruparPorDDD(personagens) {
+  return personagens.reduce((acumulador, personagem) => {
+    
+    if (personagens.telefones && personagens.telefones.length > 0) {
+      const primeiroTelefone = personagem.telefones[0];
+      const ddd = primeiroTelefone.slice(0, 2); 
+
+    
+      if (!acumulador[ddd]) {
+        acumulador[ddd] = [];
+      }
+
+
+      acumulador[ddd].push(personagem.nome);
+    }
+    
+    return acumulador;
+  }, {});
+}

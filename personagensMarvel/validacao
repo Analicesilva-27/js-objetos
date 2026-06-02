@@ -1,0 +1,23 @@
+function validarTelefonesSHIELD(personagens) {
+  const inconsistentes = personagens.filter(personagem => {
+    
+    if (!personagem.telefones || personagem.telefones.length < 2) {
+      return true; 
+    }
+
+    const tel1 = personagem.telefones[0];
+    const tel2 = personagem.telefones[1];
+
+    const ddd = tel1.slice(0, 2);
+    const restoNumero = tel1.slice(2);
+    
+    
+    const telefoneEsperadoComNove = `${ddd}9${restoNumero}`;
+
+    
+    return tel2 !== telefoneEsperadoComNove;
+  });
+
+  
+  return inconsistentes.map(p => p.nome);
+}

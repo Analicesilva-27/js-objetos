@@ -1,0 +1,7 @@
+function buscarPorNome(personagens, termoBusca) {
+  const termoFormatado = termoBusca.toLowerCase();
+  
+  return personagens.filter(personagem => 
+    personagem.nome.toLowerCase().includes(termoFormatado)
+  );
+}

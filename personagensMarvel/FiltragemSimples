@@ -1,0 +1,3 @@
+function filtrarMoradoresApartamento(personagens) {
+  return personagens.filter(personagem => personagem.apartamento);
+}
