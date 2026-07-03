@@ -1,10 +1,10 @@
 const precosLivros = [
     {                 
-    titulo: "JavaScript",
+    titulo: " o acordo",
     preco: 25
     },
     {
-    titulo: "PHP",
+    titulo: "A empregada",
     preco: 15
     },
       {
